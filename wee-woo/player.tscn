@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dif4ilo6gg2cr"]
+
+[ext_resource type="Script" uid="uid://dhg036qyjpotg" path="res://control.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://cn8c5n30qaufu" path="res://Urban Archivist.jpg" id="2_onrkg"]
+
+[node name="player" type="Node2D" unique_id=1503596425]
+
+[node name="Control" type="Control" parent="." unique_id=59022831]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_4flbx")
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=205434250]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 1.0
+offset_right = 797.0
+offset_bottom = 645.0
+texture = ExtResource("2_onrkg")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Control" unique_id=1148332935]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 30.0
+offset_right = 472.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0.38010305, 0.37675533, 0.33721325, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.15686275)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+text = "Combat Power: 0"
+
+[node name="leather_jacket" type="Button" parent="Control" unique_id=1905979279]
+layout_mode = 0
+offset_left = 626.0
+offset_top = 93.0
+offset_right = 797.0
+offset_bottom = 147.0
+text = "Equip Leather Jacket 
++15 Combat Power"
+autowrap_trim_flags = 0
+
+[node name="leather_gloves" type="Button" parent="Control" unique_id=535660456]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 357.0
+offset_right = 479.0
+offset_bottom = 411.0
+text = "Equip Leather Gloves
++5 Combat Power"
+
+[node name="runner_shoes" type="Button" parent="Control" unique_id=1238098274]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 587.0
+offset_right = 795.0
+offset_bottom = 641.0
+text = "Equip Runner Shoes
++10 Combat Power
+"
+
+[connection signal="pressed" from="Control/leather_jacket" to="Control" method="_on_leather_jacket_pressed"]
+[connection signal="pressed" from="Control/leather_gloves" to="Control" method="_on_leather_gloves_pressed"]
+[connection signal="pressed" from="Control/runner_shoes" to="Control" method="_on_runner_shoes_pressed"]

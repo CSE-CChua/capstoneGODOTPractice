@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cmyk42r16sdtk"]
+
+[ext_resource type="Script" uid="uid://cpvsejjq83frf" path="res://area_2d.gd" id="1_f3sb7"]
+[ext_resource type="Script" uid="uid://ik6cwe3rwqjt" path="res://world.gd" id="1_fj7yv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o7x00"]
+radius = 57.0
+height = 114.0
+
+[node name="world" type="Node2D" unique_id=592079038]
+script = ExtResource("1_fj7yv")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=327166552]
+script = ExtResource("1_f3sb7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=866667230]
+position = Vector2(177, 179)
+shape = SubResource("CapsuleShape2D_o7x00")
